@@ -1,4 +1,6 @@
-from Bomber_own_class import Bomber
+#!/usr/bin/ python
+#!coding:utf-8
+from Bomber_body import Bomber
 
 print("Welcome to Bomber")
 count = int(input("Enter count of processes: "))
